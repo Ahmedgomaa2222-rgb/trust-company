@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Company Links</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 0.4; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px) rotateY(90deg); }
+      to { opacity: 1; transform: translateX(0) rotateY(0deg); }
+    }
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 15px rgba(212,175,55,0.2), 0 0 30px rgba(212,175,55,0.1); }
+      50% { box-shadow: 0 0 25px rgba(212,175,55,0.4), 0 0 40px rgba(212,175,55,0.2); }
+    }
+    @keyframes shimmer-light {
+      0%, 100% { left: -100%; }
+      50% { left: 100%; }
+    }
+    @keyframes scale-in {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .logo-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    .logo-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .logo-container::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4af37, #f5d76e, #d4af37);
+      opacity: 0.3;
+      animation: spin 3s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .link-card {
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    .link-card:hover::before {
+      left: 100%;
+    }
+    .link-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(212,175,55,0.2);
+      border-color: rgba(212,175,55,0.4);
+    }
+    .link-card:active { transform: scale(0.96); }
+    .call-btn-ring {
+      position: absolute; inset: -6px; border-radius: 50%;
+      border: 2px solid #22c55e;
+      animation: pulse-ring 1.8s ease infinite;
+    }
+    .call-btn-glow {
+      animation: glow-pulse 2s ease-in-out infinite;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full w-full" style="font-family: 'Cairo', sans-serif;">
+  <div id="app" class="h-full w-full overflow-auto" style="background: linear-gradient(160deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);">
+   <div class="max-w-md mx-auto px-5 py-10 flex flex-col items-center min-h-full"><!-- Logo / Avatar -->
+    <div class="fade-up relative mb-5" style="animation-delay:0.05s">
+     <div class="w-24 h-24 rounded-full flex items-center justify-center logo-float logo-container" style="background: linear-gradient(135deg, #d4af37, #f5d76e, #d4af37); box-shadow: 0 0 30px rgba(212,175,55,0.35);"><img id="logoImage" src="" alt="Logo" class="logo-img" style="display:none;">
+      <div id="logoPlaceholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+       <svg width="48" height="48" viewbox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <img src="WhatsApp Image 2026-04-15 at 1.36.16 PM.jpeg"/>
+        <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
+       </svg>
+      </div>
+     </div>
+    </div><!-- Title -->
+    <h1 id="pageTitle" class="fade-up text-3xl font-black text-center mb-1" style="animation-delay:0.12s; color: #d4af37;">TRUST COMPANY</h1>
+    <p id="subtitle" class="fade-up text-sm font-semibold mb-8 text-center" style="animation-delay:0.18s; color: #8a8a9a;">جميع روابطنا في مكان واحد</p><!-- Links Container -->
+    <div class="w-full flex flex-col gap-3" id="linksContainer"><!-- Telegram --> <a href="https://t.me/TRUSTC0MPANY" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.22s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #2AABEE;">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="#fff">
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm5.654 7.3c.097-.002.2.012.278.04a.5.5 0 0 1 .326.377c.04.16.053.327.04.504-.14 1.467-.746 5.026-1.055 6.67-.13.695-.39 .928-.64.95-.543.05-.956-.358-1.482-.702-.823-.538-1.288-.873-2.087-1.398-.923-.607-.325-1.04.202-1.642.138-.157 2.534-2.323 2.58-2.52.006-.025.012-.117-.044-.165s-.14-.03-.2-.018c-.085.018-1.44.916-4.066 2.688-.384.264-.733.393-1.045.386-.344-.008-1.006-.195-1.498-.355-.604-.197-.1083-.301-1.04-.295.68-.006 2.004-.325 3.126-.66 1.17-.35 1.98-.535 2.287-.545z" />
+       </svg>
+      </div><span class="text-white font-bold text-base">Telegram</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- TikTok --> <a href="https://www.tiktok.com/@trust.eg.factory1?_r=1&amp;_t=ZS-95XgYfQu9F1" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.28s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #010101;">
+       <svg width="20" height="22" viewbox="0 0 448 512" fill="#fff">
+        <path d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3v178.8A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.2 71.2V0h88a121 121 0 0 0 1.9 22.2A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+       </svg>
+      </div><span class="text-white font-bold text-base">TikTok</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- Facebook --> <a href="https://www.facebook.com/share/1CbYK7gEaK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.34s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #1877F2;">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="#fff">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+       </svg>
+      </div><span class="text-white font-bold text-base">Facebook</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- Instagram --> <a href="https://www.instagram.com/trust.eg.factory?igsh=MWo4Z3c1cGV3d2Zxag%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.40s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="#fff">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+       </svg>
+      </div><span class="text-white font-bold text-base">Instagram</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- InstaPay --> <a href="https://ipn.eg/S/mohamed.elseady426005/instapay/5TNDLy" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.46s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #f7931a;">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" />
+       </svg>
+      </div><span class="text-white font-bold text-base">InstaPay</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- Vodafone Cash --> <a href="https://vf.eg/vfcash?id=mt&amp;qrId=bSOFeE" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.52s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #e60000;">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+       </svg>
+      </div><span class="text-white font-bold text-base">Vodafone Cash</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- WhatsApp Channel --> <a href="https://whatsapp.com/channel/0029Vb7HeG4IXnlkGSwxCn2o" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.58s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #25D366;">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+       </svg>
+      </div><span class="text-white font-bold text-base">WhatsApp Channel</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- GPS / Location --> <a href="https://wa.me/201000769618" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.64s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #4285F4;">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+       </svg>
+      </div><span class="text-white font-bold text-base">GPS / الموقع</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a> <!-- WhatsApp --> <a href="https://wa.me/201000769618" target="_blank" rel="noopener noreferrer" class="link-card fade-up flex items-center gap-4 w-full rounded-2xl px-5 py-4" style="animation-delay:0.70s; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15);">
+      <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #25D366;">
+       <svg width="22" height="22" viewbox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+       </svg>
+      </div><span class="text-white font-bold text-base">WhatsApp</span> <i data-lucide="chevron-left" class="mr-auto" style="width:18px;height:18px;color:#555;"></i> </a>
+    </div><!-- Call Button -->
+    <div class="fade-up mt-8 mb-6 relative" style="animation-delay:0.78s;">
+     <div class="call-btn-ring"></div><a href="tel:+201000769618" class="relative w-16 h-16 rounded-full flex items-center justify-center call-btn-glow" style="background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 4px 20px rgba(34,197,94,0.4); transition: all 0.3s ease;">
+      <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg></a>
+    </div>
+    <p class="fade-up text-xs mb-8" style="animation-delay:0.82s; color:#555;">اضغط للاتصال مباشرة</p><!-- Footer -->
+    <p class="fade-up text-xs mt-auto pb-4" style="animation-delay:0.88s; color:#333;">© Trust Company 2025</p>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      page_title: 'TRUST COMPANY',
+      subtitle: 'جميع روابطنا في مكان واحد',
+      background_color: '#0a0a0a',
+      accent_color: '#d4af37',
+      text_color: '#ffffff',
+      card_bg_color: 'rgba(255,255,255,0.06)',
+      muted_color: '#8a8a9a',
+      font_family: 'Cairo',
+      font_size: 16,
+      logo_url: ''
+    };
+
+    function applyConfig(config) {
+      const title = document.getElementById('pageTitle');
+      const sub = document.getElementById('subtitle');
+      if (title) title.textContent = config.page_title || defaultConfig.page_title;
+      if (sub) sub.textContent = config.subtitle || defaultConfig.subtitle;
+
+      if (title) title.style.color = config.accent_color || defaultConfig.accent_color;
+      if (sub) sub.style.color = config.muted_color || defaultConfig.muted_color;
+
+      const app = document.getElementById('app');
+      const bg = config.background_color || defaultConfig.background_color;
+      if (app) app.style.background = `linear-gradient(160deg, ${bg} 0%, #1a1a2e 50%, ${bg} 100%)`;
+
+      const font = config.font_family || defaultConfig.font_family;
+      const size = config.font_size || defaultConfig.font_size;
+      document.body.style.fontFamily = `${font}, Cairo, sans-serif`;
+
+      if (title) title.style.fontSize = `${size * 1.875}px`;
+      if (sub) sub.style.fontSize = `${size * 0.875}px`;
+
+      document.querySelectorAll('.link-card span').forEach(s => {
+        s.style.color = config.text_color || defaultConfig.text_color;
+        s.style.fontSize = `${size}px`;
+      });
+
+      // Handle logo image
+      const logoImg = document.getElementById('logoImage');
+      const logoPlaceholder = document.getElementById('logoPlaceholder');
+      if (config.logo_url && config.logo_url.trim()) {
+        logoImg.src = config.logo_url;
+        logoImg.style.display = 'block';
+        logoPlaceholder.style.display = 'none';
+      } else {
+        logoImg.style.display = 'none';
+        logoPlaceholder.style.display = 'flex';
+      }
+    }
+
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => applyConfig(config),
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+          { get: () => config.card_bg_color || defaultConfig.card_bg_color, set: (v) => { config.card_bg_color = v; window.elementSdk.setConfig({ card_bg_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+          { get: () => config.accent_color || defaultConfig.accent_color, set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } },
+          { get: () => config.muted_color || defaultConfig.muted_color, set: (v) => { config.muted_color = v; window.elementSdk.setConfig({ muted_color: v }); } }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+        }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['page_title', config.page_title || defaultConfig.page_title],
+        ['subtitle', config.subtitle || defaultConfig.subtitle]
+      ])
+    });
+
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ecab79bc0ac794c',t:'MTc3NjI1MzY2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
